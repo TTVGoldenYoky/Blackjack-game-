@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blackjack Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span id="balanceText">Balance: 1000</span>
+    <span id="sessionText">Win/Loss: 0</span>
+  </div>
+
+  <main class="table">
+    <h1>Blackjack</h1>
+
+    <div class="hand">
+      <h2>Dealer</h2>
+      <div id="dealerCards" class="cards"></div>
+      <div id="dealerTotal" class="total"></div>
+    </div>
+
+    <div class="hand">
+      <h2>Player</h2>
+      <div id="playerCards" class="cards"></div>
+      <div id="playerTotal" class="total"></div>
+    </div>
+
+    <div class="bet-section">
+      <label>Bet per round: </label>
+      <input id="betInput" type="number" value="50" min="5" step="5" />
+    </div>
+
+    <div class="controls">
+      <button id="dealBtn">Deal</button>
+      <button id="hitBtn" disabled>Hit</button>
+      <button id="standBtn" disabled>Stand</button>
+    </div>
+
+    <p id="message"></p>
+  </main>
+
+  <!-- BOTTOM BAR BUTTONS -->
+  <div class="bottom-bar">
+    <button class="add-btn" data-amount="5">+5</button>
+    <button class="add-btn" data-amount="100">+100</button>
+    <button class="add-btn" data-amount="1000">+1000</button>
+    <button class="add-btn" data-amount="10000">+10000</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
